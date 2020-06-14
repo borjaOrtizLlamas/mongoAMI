@@ -23,3 +23,9 @@
       password: "admin"
       database: "admin"
       roles: readWrite,dbAdmin,userAdmin
+  - name: setting config mongo
+    copy:
+      src: "{{local_root}}mongod.conf"
+      dest: /etc/mongod.conf
+      mode: 0755
+    become: yes
