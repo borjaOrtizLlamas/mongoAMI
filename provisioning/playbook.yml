@@ -25,7 +25,7 @@
       roles: readWrite,dbAdmin,userAdmin
   - name: setting config mongo
     copy:
-      src: "{{local_root}}mongod.conf"
-      dest: /etc/mongod.conf
+      src: "{{local_root}}mongodb.conf"
+      dest: /etc/mongodb.conf
       mode: 0755
     become: yes
